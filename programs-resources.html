@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs & Resources | INVIXAA EDTECH</title>
+  <meta name="description" content="Explore INVIXAA EDTECH's complete suite of programs and resources — Courses, Study Material, Video Library, and Research Portal — all in one place." />
+  <meta name="keywords" content="INVIXAA EDTECH, online courses, study material, video library, research portal, FDP, UGC NET, PhD guidance" />
+  <meta property="og:title" content="Programs & Resources | INVIXAA EDTECH" />
+  <meta property="og:description" content="Explore INVIXAA EDTECH's complete suite of programs, courses, study material, video library, and research portal." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ============================================
+       DESIGN SYSTEM — INVIXAA EDTECH
+       Gold · Maroon · White
+    ============================================ */
+    :root {
+      --gold-primary:   #C9A227;
+      --gold-light:     #E4BC3C;
+      --gold-pale:      #F5E9C0;
+      --gold-muted:     #A07D18;
+      --maroon-primary: #7B0D1E;
+      --maroon-deep:    #5A0A16;
+      --maroon-mid:     #9B1A2E;
+      --maroon-light:   #C24B5A;
+      --white:          #FFFFFF;
+      --off-white:      #FAF8F4;
+      --cream:          #F5F0E8;
+      --text-dark:      #1C0A0E;
+      --text-body:      #3D2229;
+      --text-muted:     #6B4C54;
+      --border-subtle:  rgba(201,162,39,0.25);
+      --border-mid:     rgba(201,162,39,0.5);
+      --shadow-card:    0 4px 24px rgba(123,13,30,0.10), 0 1px 4px rgba(0,0,0,0.06);
+      --shadow-hover:   0 12px 48px rgba(123,13,30,0.18), 0 4px 16px rgba(201,162,39,0.15);
+      --shadow-glow:    0 0 32px rgba(201,162,39,0.20);
+      --radius-card:    20px;
+      --radius-inner:   12px;
+      --radius-pill:    999px;
+      --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-spring: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--off-white);
+      color: var(--text-body);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ============================================
+       HEADER / HERO
+    ============================================ */
+    .programs-hero {
+      background: linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon-primary) 55%, #6B0E1C 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 130px 0 0;
+    }
+
+    .programs-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 15% 30%, rgba(201,162,39,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 85% 70%, rgba(201,162,39,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Decorative line pattern */
+    .programs-hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--gold-primary), var(--gold-light), var(--gold-primary), transparent);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 24px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content { text-align: center; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,162,39,0.15);
+      border: 1px solid rgba(201,162,39,0.35);
+      border-radius: var(--radius-pill);
+      padding: 6px 18px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .section-eyebrow i { font-size: 0.7rem; }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+      color: rgba(255,255,255,0.78);
+      max-width: 620px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* ============================================
+       MAIN LAYOUT
+    ============================================ */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* ============================================
+       SECTION INTRO
+    ============================================ */
+    .section-intro {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .section-intro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, var(--maroon-primary), var(--maroon-mid));
+      color: var(--gold-light);
+      border-radius: var(--radius-pill);
+      padding: 6px 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-main-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--maroon-primary);
+      margin-bottom: 14px;
+    }
+
+    .section-main-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* Gold ornament line */
+    .ornament-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0 0;
+    }
+
+    .ornament-line::before,
+    .ornament-line::after {
+      content: '';
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-primary));
+      border-radius: 2px;
+    }
+
+    .ornament-line::after {
+      background: linear-gradient(90deg, var(--gold-primary), transparent);
+    }
+
+    .ornament-diamond {
+      width: 8px;
+      height: 8px;
+      background: var(--gold-primary);
+      transform: rotate(45deg);
+      border-radius: 2px;
+    }
+
+    /* ============================================
+       MODULE CARDS GRID
+    ============================================ */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 540px), 1fr));
+      gap: 28px;
+    }
+
+    /* ============================================
+       INDIVIDUAL MODULE CARD
+    ============================================ */
+    .module-card {
+      background: var(--white);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: box-shadow var(--transition-smooth), border-color var(--transition-smooth), transform var(--transition-smooth);
+      will-change: transform;
+    }
+
+    .module-card:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-mid);
+      transform: translateY(-2px);
+    }
+
+    .module-card.is-open {
+      border-color: var(--gold-primary);
+      box-shadow: var(--shadow-hover), var(--shadow-glow);
+    }
+
+    /* Card Header (trigger) */
+    .module-trigger {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 28px 28px;
+      cursor: pointer;
+      user-select: none;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      position: relative;
+      transition: background var(--transition-smooth);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .module-card.is-open .module-trigger {
+      background: linear-gradient(135deg, var(--maroon-primary) 0%, var(--maroon-mid) 100%);
+    }
+
+    /* Icon wrapper */
+    .module-icon-wrap {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      transition: all var(--transition-spring);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .module-icon-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity var(--transition-smooth);
+      border-radius: inherit;
+    }
+
+    .mod-courses .module-icon-wrap {
+      background: linear-gradient(135deg, #FFF3C4, #FFE58A);
+      color: #B8860B;
+    }
+    .mod-courses .module-icon-wrap::before { background: linear-gradient(135deg, var(--gold-primary), var(--gold-light)); }
+    .mod-study .module-icon-wrap {
+      background: linear-gradient(135deg, #FFE4E6, #FFCCD2);
+      color: var(--maroon-primary);
+    }
+    .mod-study .module-icon-wrap::before { background: linear-gradient(135deg, var(--maroon-primary), var(--maroon-mid)); }
+    .mod-video .module-icon-wrap {
+      background: linear-gradient(135deg, #EDE9FF, #D4CBFF);
+      color: #5B3DBD;
+    }
+    .mod-video .module-icon-wrap::before { background: linear-gradient(135deg, #5B3DBD, #7C5DD8); }
+    .mod-research .module-icon-wrap {
+      background: linear-gradient(135deg, #D4EFF7, #B3E0EF);
+      color: #1A6E8C;
+    }
+    .mod-research .module-icon-wrap::before { background: linear-gradient(135deg, #1A6E8C, #2491B5); }
+
+    .module-card.is-open .module-icon-wrap {
+      transform: scale(1.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .module-card.is-open .module-icon-wrap::before { opacity: 1; }
+    .module-card.is-open .module-icon-wrap i { color: var(--white) !important; position: relative; z-index: 1; }
+
+    /* Trigger text */
+    .module-trigger-text { flex: 1; min-width: 0; }
+
+    .module-number {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 4px;
+      transition: color var(--transition-smooth);
+    }
+
+    .module-card.is-open .module-number { color: rgba(255,255,255,0.7); }
+
+    .module-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: 700;
+      color: var(--maroon-primary);
+      line-height: 1.3;
+      transition: color var(--transition-smooth);
+    }
+
+    .module-card.is-open .module-heading { color: var(--white); }
+
+    .module-tagline {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+      transition: color var(--transition-smooth);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .module-card.is-open .module-tagline { color: rgba(255,255,255,0.65); }
+
+    /* Plus/Minus toggle */
+    .module-toggle-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--border-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--gold-primary);
+      flex-shrink: 0;
+      transition: all var(--transition-spring);
+      background: transparent;
+    }
+
+    .module-card.is-open .module-toggle-icon {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.5);
+      color: var(--white);
+      transform: rotate(45deg);
+    }
+
+    /* Separator line on the trigger */
+    .module-trigger-separator {
+      position: absolute;
+      bottom: 0; left: 28px; right: 28px;
+      height: 1px;
+      background: var(--border-subtle);
+      transition: opacity var(--transition-smooth);
+    }
+
+    .module-card.is-open .module-trigger-separator { opacity: 0; }
+
+    /* ============================================
+       EXPANDABLE PANEL
+       Uses interpolate-size for smooth height
+    ============================================ */
+    .module-body {
+      interpolate-size: allow-keywords;
+      block-size: 0;
+      overflow: hidden;
+      transition:
+        block-size var(--transition-smooth),
+        opacity 0.35s ease;
+      opacity: 0;
+    }
+
+    .module-card.is-open .module-body {
+      block-size: auto;
+      opacity: 1;
+    }
+
+    /* Fallback for browsers without interpolate-size */
+    @supports not (interpolate-size: allow-keywords) {
+      .module-body {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows var(--transition-smooth), opacity 0.35s ease;
+        block-size: unset;
+        overflow: hidden;
+      }
+      .module-body-inner-wrap {
+        overflow: hidden;
+        min-height: 0;
+      }
+      .module-card.is-open .module-body {
+        grid-template-rows: 1fr;
+        opacity: 1;
+        block-size: unset;
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .module-body,
+      .module-card,
+      .module-icon-wrap,
+      .module-toggle-icon,
+      .tag-chip,
+      .feature-item {
+        transition: none !important;
+      }
+    }
+
+    /* ============================================
+       PANEL INNER CONTENT
+    ============================================ */
+    .module-body-inner {
+      padding: 28px;
+    }
+
+    /* Description block */
+    .module-desc-block {
+      background: linear-gradient(135deg, var(--cream), rgba(201,162,39,0.06));
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--gold-primary);
+      border-radius: var(--radius-inner);
+      padding: 14px 18px;
+      margin-bottom: 24px;
+    }
+
+    .module-desc-block p {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* Sub-section labels */
+    .content-section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--maroon-primary);
+      margin-bottom: 14px;
+      margin-top: 22px;
+    }
+
+    .content-section-label:first-of-type { margin-top: 0; }
+
+    .content-section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border-mid), transparent);
+      border-radius: 1px;
+    }
+
+    /* Tag chips — items list */
+    .tags-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 8px;
+    }
+
+    .tag-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+      font-weight: 500;
+      cursor: default;
+      transition: all 0.22s ease;
+      border: 1px solid transparent;
+    }
+
+    .tag-chip i { font-size: 0.72rem; }
+
+    .tag-chip.variant-gold {
+      background: var(--gold-pale);
+      color: var(--gold-muted);
+      border-color: rgba(201,162,39,0.3);
+    }
+    .tag-chip.variant-gold:hover {
+      background: var(--gold-primary);
+      color: var(--white);
+      border-color: var(--gold-primary);
+      transform: translateY(-1px);
+    }
+
+    .tag-chip.variant-maroon {
+      background: rgba(123,13,30,0.07);
+      color: var(--maroon-primary);
+      border-color: rgba(123,13,30,0.15);
+    }
+    .tag-chip.variant-maroon:hover {
+      background: var(--maroon-primary);
+      color: var(--white);
+      border-color: var(--maroon-primary);
+      transform: translateY(-1px);
+    }
+
+    .tag-chip.variant-purple {
+      background: rgba(91,61,189,0.08);
+      color: #5B3DBD;
+      border-color: rgba(91,61,189,0.2);
+    }
+    .tag-chip.variant-purple:hover {
+      background: #5B3DBD;
+      color: var(--white);
+      border-color: #5B3DBD;
+      transform: translateY(-1px);
+    }
+
+    .tag-chip.variant-teal {
+      background: rgba(26,110,140,0.08);
+      color: #1A6E8C;
+      border-color: rgba(26,110,140,0.2);
+    }
+    .tag-chip.variant-teal:hover {
+      background: #1A6E8C;
+      color: var(--white);
+      border-color: #1A6E8C;
+      transform: translateY(-1px);
+    }
+
+    /* Feature list with icon dots */
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: var(--off-white);
+      border-radius: var(--radius-inner);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-body);
+      transition: all 0.22s ease;
+    }
+
+    .feature-item:hover {
+      background: var(--cream);
+      border-color: var(--gold-primary);
+      color: var(--maroon-primary);
+      transform: translateX(3px);
+    }
+
+    .feature-item i {
+      font-size: 0.85rem;
+      color: var(--gold-primary);
+      flex-shrink: 0;
+    }
+
+    /* Filter row */
+    .filter-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 16px 18px;
+      background: var(--cream);
+      border-radius: var(--radius-inner);
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 8px;
+    }
+
+    .filter-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--maroon-primary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .filter-sep { width: 1px; height: 20px; background: var(--border-mid); flex-shrink: 0; }
+
+    .filter-btn {
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-mid);
+      background: var(--white);
+      color: var(--text-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--gold-primary);
+      border-color: var(--gold-primary);
+      color: var(--white);
+    }
+
+    /* Search bar */
+    .module-search {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .module-search input {
+      width: 100%;
+      padding: 12px 44px 12px 44px;
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius-inner);
+      background: var(--white);
+      font-size: 0.88rem;
+      font-family: inherit;
+      color: var(--text-body);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .module-search input:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 3px rgba(201,162,39,0.12);
+    }
+
+    .module-search input::placeholder { color: var(--text-muted); }
+
+    .search-icon-left {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold-primary);
+      font-size: 0.9rem;
+    }
+
+    .search-icon-right {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--maroon-primary);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.72rem;
+      transition: background 0.2s;
+    }
+
+    .search-icon-right:hover { background: var(--maroon-mid); }
+
+    /* Note block */
+    .note-block {
+      display: flex;
+      gap: 12px;
+      padding: 14px 16px;
+      background: rgba(91,61,189,0.06);
+      border: 1px solid rgba(91,61,189,0.18);
+      border-radius: var(--radius-inner);
+      margin-top: 20px;
+    }
+
+    .note-block i { color: #5B3DBD; font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+
+    .note-block p { font-size: 0.8rem; color: #3D2E6B; line-height: 1.6; }
+
+    /* Category pills for video module */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .category-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: linear-gradient(135deg, var(--white), var(--off-white));
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-inner);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all 0.22s ease;
+    }
+
+    .category-item:hover {
+      border-color: var(--gold-primary);
+      background: linear-gradient(135deg, var(--gold-pale), rgba(201,162,39,0.08));
+      color: var(--maroon-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(201,162,39,0.15);
+    }
+
+    .cat-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* CTA button inside cards */
+    .module-cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 24px;
+      background: linear-gradient(135deg, var(--maroon-primary), var(--maroon-mid));
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.25s ease;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--maroon-deep), var(--maroon-primary));
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(123,13,30,0.3);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: transparent;
+      color: var(--gold-muted);
+      border: 1.5px solid var(--gold-primary);
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      background: var(--gold-primary);
+      color: var(--white);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(201,162,39,0.3);
+    }
+
+    /* ============================================
+       FLOATING PROGRESS INDICATOR
+    ============================================ */
+    .modules-progress-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .prog-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.22s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .prog-pill i { font-size: 0.8rem; }
+
+    .prog-pill.active, .prog-pill:hover {
+      background: linear-gradient(135deg, var(--maroon-primary), var(--maroon-mid));
+      color: var(--white);
+      border-color: var(--maroon-primary);
+      box-shadow: 0 4px 16px rgba(123,13,30,0.25);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    .site-footer {
+      background: var(--maroon-deep);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.82rem;
+    }
+
+    .site-footer strong { color: var(--gold-primary); }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 768px) {
+      .header-inner { padding: 20px 18px 32px; }
+      .brand-row { margin-bottom: 24px; }
+      .hero-stats { gap: 24px; }
+      .main-content { padding: 40px 16px 60px; }
+      .modules-grid { grid-template-columns: 1fr; gap: 18px; }
+      .module-trigger { padding: 20px 18px; }
+      .module-body-inner { padding: 20px 18px; }
+      .feature-list { grid-template-columns: 1fr 1fr; }
+      .category-grid { grid-template-columns: 1fr; }
+      .module-cta-row { flex-direction: column; }
+      .btn-primary, .btn-secondary { justify-content: center; width: 100%; }
+      .hero-stats { gap: 20px; }
+      .filter-row { gap: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .feature-list { grid-template-columns: 1fr; }
+      .tags-grid { gap: 7px; }
+      .modules-progress-row { gap: 6px; }
+      .prog-pill { font-size: 0.68rem; padding: 6px 12px; }
+    }
+
+    /* ============================================
+       SCROLL-REVEAL ENTRY ANIMATION
+    ============================================ */
+    .module-card {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: cardReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .module-card:nth-child(1) { animation-delay: 0.05s; }
+    .module-card:nth-child(2) { animation-delay: 0.15s; }
+    .module-card:nth-child(3) { animation-delay: 0.25s; }
+    .module-card:nth-child(4) { animation-delay: 0.35s; }
+
+    @keyframes cardReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .module-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Shimmer accent on open card header */
+    .module-card.is-open .module-trigger::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent);
+      animation: shimmerSlide 2s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes shimmerSlide {
+      0%   { left: -100%; }
+      50%  { left: 100%; }
+      100% { left: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+     STICKY GLASS NAVIGATION HEADER
+     ========================================================================== -->
+  <header class="site-header" role="banner" id="mainHeader">
+    <div class="navbar">
+      <a href="index.html" class="brand-link">
+        <div class="logo-wrap">
+          <img src="invixaa_logo.jpg" alt="INVIXAA Logo" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-family:Playfair Display,serif;font-weight:800;color:#7B0D1E;font-size:1rem;\'>IX</span>'" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">INVIXAA</span>
+          <span class="brand-subtitle">EDTECH</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <li class="nav-item active"><a href="programs-resources.html">Programs &amp; Resources</a></li>
+          <li class="nav-item"><a href="index.html#contact" class="nav-cta">Connect With Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Menu Trigger (Mobile) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+     PROGRAMS HERO SECTION
+     ========================================================================== -->
+  <section class="programs-hero">
+    <div class="container" style="padding: 0;">
+      <div class="header-inner" style="padding-top: 40px;">
+
+        <div class="hero-content">
+          <div class="section-eyebrow">
+            <i class="fas fa-graduation-cap"></i>
+            Knowledge · Innovation · Excellence
+          </div>
+          <h1 class="hero-title">
+            Programs &amp; <span>Resources</span>
+          </h1>
+          <p class="hero-subtitle" style="margin-bottom: 30px;">
+            Discover our complete ecosystem of learning programs, academic resources, digital media, and research support — designed for students, educators, and researchers alike.
+          </p>
+          <div class="hero-stats" role="list">
+            <div class="stat-item" role="listitem">
+              <span class="stat-num">4</span>
+              <span class="stat-label">Core Modules</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <span class="stat-num">50+</span>
+              <span class="stat-label">Resource Types</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <span class="stat-num">10K+</span>
+              <span class="stat-label">Learners Served</span>
+            </div>
+            <div class="stat-item" role="listitem">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Possibilities</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       MAIN CONTENT
+  ============================== -->
+  <main class="main-content" id="main">
+
+    <!-- Section Intro -->
+    <div class="section-intro">
+      <div class="section-intro-badge">
+        <i class="fas fa-layer-group"></i>
+        Interactive Resource Hub
+      </div>
+      <h2 class="section-main-title">Explore Our Learning Ecosystem</h2>
+      <p class="section-main-desc">
+        Click any module below to expand and explore its full suite of offerings. Each module is crafted for maximum impact and accessibility.
+      </p>
+      <div class="ornament-line" aria-hidden="true">
+        <div class="ornament-diamond"></div>
+      </div>
+    </div>
+
+    <!-- Quick Nav Pills -->
+    <nav class="modules-progress-row" aria-label="Quick navigation to modules">
+      <button class="prog-pill" onclick="scrollToCard('mod-courses')" id="pill-courses">
+        <i class="fas fa-book-open"></i> Courses
+      </button>
+      <button class="prog-pill" onclick="scrollToCard('mod-study')" id="pill-study">
+        <i class="fas fa-file-alt"></i> Study Material
+      </button>
+      <button class="prog-pill" onclick="scrollToCard('mod-video')" id="pill-video">
+        <i class="fas fa-play-circle"></i> Video Library
+      </button>
+      <button class="prog-pill" onclick="scrollToCard('mod-research')" id="pill-research">
+        <i class="fas fa-flask"></i> Research Portal
+      </button>
+    </nav>
+
+    <!-- ==============================
+         MODULE CARDS GRID
+    ============================== -->
+    <div class="modules-grid" role="list">
+
+      <!-- ===== MODULE 1: COURSES ===== -->
+      <article class="module-card mod-courses" id="mod-courses" role="listitem">
+        <button
+          class="module-trigger"
+          id="trigger-courses"
+          aria-expanded="false"
+          aria-controls="body-courses"
+          onclick="toggleModule('courses')"
+        >
+          <div class="module-icon-wrap" aria-hidden="true">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div class="module-trigger-text">
+            <div class="module-number">Module 01</div>
+            <div class="module-heading">Courses &amp; Learning Programs</div>
+            <div class="module-tagline">Certificate · Diploma · Live Classes · FDP</div>
+          </div>
+          <div class="module-toggle-icon" aria-hidden="true">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="module-trigger-separator" aria-hidden="true"></div>
+        </button>
+
+        <div class="module-body" id="body-courses" role="region" aria-labelledby="trigger-courses">
+          <div class="module-body-inner-wrap">
+            <div class="module-body-inner">
+
+              <!-- Search -->
+              <div class="module-search">
+                <i class="fas fa-search search-icon-left" aria-hidden="true"></i>
+                <input type="search" id="search-courses" placeholder="Search courses, programs, topics…" aria-label="Search courses" />
+                <button class="search-icon-right" aria-label="Submit search"><i class="fas fa-arrow-right"></i></button>
+              </div>
+
+              <!-- Description -->
+              <div class="module-desc-block">
+                <p>Industry-relevant learning programs designed to enhance skills, knowledge, and career opportunities.</p>
+              </div>
+
+              <!-- Course Types -->
+              <div class="content-section-label">
+                <i class="fas fa-list-ul"></i> Course Types
+              </div>
+              <div class="tags-grid">
+                <span class="tag-chip variant-gold"><i class="fas fa-certificate"></i> Certificate Courses</span>
+                <span class="tag-chip variant-gold"><i class="fas fa-scroll"></i> Diploma Courses</span>
+                <span class="tag-chip variant-maroon"><i class="fas fa-chalkboard-teacher"></i> Faculty Development (FDP)</span>
+                <span class="tag-chip variant-maroon"><i class="fas fa-tools"></i> Skill Development Courses</span>
+                <span class="tag-chip variant-gold"><i class="fas fa-video"></i> Recorded Courses</span>
+                <span class="tag-chip variant-maroon"><i class="fas fa-broadcast-tower"></i> Live Classes</span>
+              </div>
+
+              <!-- Filters -->
+              <div class="content-section-label">
+                <i class="fas fa-filter"></i> Filters &amp; Options
+              </div>
+              <div class="filter-row">
+                <span class="filter-label">Access:</span>
+                <div class="filter-sep"></div>
+                <button class="filter-btn active" onclick="setFilter(this)">All</button>
+                <button class="filter-btn" onclick="setFilter(this)"><i class="fas fa-lock-open"></i> Free</button>
+                <button class="filter-btn" onclick="setFilter(this)"><i class="fas fa-star"></i> Paid</button>
+              </div>
+              <div class="filter-row">
+                <span class="filter-label">Category:</span>
+                <div class="filter-sep"></div>
+                <button class="filter-btn active" onclick="setFilter(this)">All</button>
+                <button class="filter-btn" onclick="setFilter(this)">Technology</button>
+                <button class="filter-btn" onclick="setFilter(this)">Management</button>
+                <button class="filter-btn" onclick="setFilter(this)">Law &amp; IPR</button>
+                <button class="filter-btn" onclick="setFilter(this)">Research</button>
+              </div>
+              <div class="filter-row">
+                <span class="filter-label">Duration:</span>
+                <div class="filter-sep"></div>
+                <button class="filter-btn active" onclick="setFilter(this)">All</button>
+                <button class="filter-btn" onclick="setFilter(this)">&lt; 1 Week</button>
+                <button class="filter-btn" onclick="setFilter(this)">1–4 Weeks</button>
+                <button class="filter-btn" onclick="setFilter(this)">1–3 Months</button>
+                <button class="filter-btn" onclick="setFilter(this)">3+ Months</button>
+              </div>
+
+              <div class="module-cta-row">
+                <button class="btn-primary"><i class="fas fa-th-large"></i> Browse All Courses</button>
+                <button class="btn-secondary"><i class="fas fa-calendar-alt"></i> View Schedule</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== MODULE 2: STUDY MATERIAL ===== -->
+      <article class="module-card mod-study" id="mod-study" role="listitem">
+        <button
+          class="module-trigger"
+          id="trigger-study"
+          aria-expanded="false"
+          aria-controls="body-study"
+          onclick="toggleModule('study')"
+        >
+          <div class="module-icon-wrap" aria-hidden="true">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="module-trigger-text">
+            <div class="module-number">Module 02</div>
+            <div class="module-heading">Study Material &amp; Academic Resources</div>
+            <div class="module-tagline">PDFs · PPTs · Question Banks · E-Books</div>
+          </div>
+          <div class="module-toggle-icon" aria-hidden="true">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="module-trigger-separator" aria-hidden="true"></div>
+        </button>
+
+        <div class="module-body" id="body-study" role="region" aria-labelledby="trigger-study">
+          <div class="module-body-inner-wrap">
+            <div class="module-body-inner">
+
+              <!-- Search -->
+              <div class="module-search">
+                <i class="fas fa-search search-icon-left" aria-hidden="true"></i>
+                <input type="search" id="search-study" placeholder="Search PDFs, notes, papers…" aria-label="Search study material" />
+                <button class="search-icon-right" aria-label="Submit search"><i class="fas fa-arrow-right"></i></button>
+              </div>
+
+              <!-- Description -->
+              <div class="module-desc-block">
+                <p>Comprehensive academic resources for students, researchers, and educators.</p>
+              </div>
+
+              <!-- Resource Types -->
+              <div class="content-section-label">
+                <i class="fas fa-folder-open"></i> Resource Types
+              </div>
+              <div class="tags-grid">
+                <span class="tag-chip variant-maroon"><i class="fas fa-file-pdf"></i> PDF Documents</span>
+                <span class="tag-chip variant-maroon"><i class="fas fa-file-powerpoint"></i> PPT Presentations</span>
+                <span class="tag-chip variant-gold"><i class="fas fa-sticky-note"></i> Lecture Notes</span>
+                <span class="tag-chip variant-gold"><i class="fas fa-question-circle"></i> Question Banks</span>
+                <span class="tag-chip variant-maroon"><i class="fas fa-history"></i> Previous Year Papers</span>
+                <span class="tag-chip variant-gold"><i class="fas fa-book"></i> Books</span>
+                <span class="tag-chip variant-maroon"><i class="fas fa-tablet-alt"></i> E-Books</span>
+              </div>
+
+              <!-- Features -->
+              <div class="content-section-label">
+                <i class="fas fa-star"></i> Platform Features
+              </div>
+              <div class="feature-list">
+                <div class="feature-item"><i class="fas fa-eye"></i> Read Online</div>
+                <div class="feature-item"><i class="fas fa-download"></i> Download Option</div>
+                <div class="feature-item"><i class="fas fa-search"></i> Search Functionality</div>
+                <div class="feature-item"><i class="fas fa-tags"></i> Resource Categories</div>
+                <div class="feature-item"><i class="fas fa-bookmark"></i> Save to Library</div>
+                <div class="feature-item"><i class="fas fa-share-alt"></i> Share Resources</div>
+              </div>
+
+              <div class="module-cta-row">
+                <button class="btn-primary"><i class="fas fa-book-open"></i> Access Library</button>
+                <button class="btn-secondary"><i class="fas fa-upload"></i> Contribute Material</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== MODULE 3: VIDEO LIBRARY ===== -->
+      <article class="module-card mod-video" id="mod-video" role="listitem">
+        <button
+          class="module-trigger"
+          id="trigger-video"
+          aria-expanded="false"
+          aria-controls="body-video"
+          onclick="toggleModule('video')"
+        >
+          <div class="module-icon-wrap" aria-hidden="true">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <div class="module-trigger-text">
+            <div class="module-number">Module 03</div>
+            <div class="module-heading">Digital Video Library</div>
+            <div class="module-tagline">HD Content · Chapter-wise · Resume Playback</div>
+          </div>
+          <div class="module-toggle-icon" aria-hidden="true">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="module-trigger-separator" aria-hidden="true"></div>
+        </button>
+
+        <div class="module-body" id="body-video" role="region" aria-labelledby="trigger-video">
+          <div class="module-body-inner-wrap">
+            <div class="module-body-inner">
+
+              <!-- Search -->
+              <div class="module-search">
+                <i class="fas fa-search search-icon-left" aria-hidden="true"></i>
+                <input type="search" id="search-video" placeholder="Search videos, topics, chapters…" aria-label="Search video library" />
+                <button class="search-icon-right" aria-label="Submit search"><i class="fas fa-arrow-right"></i></button>
+              </div>
+
+              <!-- Player Features -->
+              <div class="content-section-label">
+                <i class="fas fa-sliders-h"></i> Player Features
+              </div>
+              <div class="feature-list">
+                <div class="feature-item"><i class="fas fa-hd-video fa-film"></i> HD Video Content</div>
+                <div class="feature-item"><i class="fas fa-layer-group"></i> Chapter-wise Learning</div>
+                <div class="feature-item"><i class="fas fa-sticky-note"></i> Notes Below Videos</div>
+                <div class="feature-item"><i class="fas fa-tachometer-alt"></i> Playback Speed Control</div>
+                <div class="feature-item"><i class="fas fa-history"></i> Resume Playback</div>
+                <div class="feature-item"><i class="fas fa-expand-arrows-alt"></i> Full Screen Mode</div>
+                <div class="feature-item"><i class="fas fa-download"></i> Optional Download</div>
+                <div class="feature-item"><i class="fas fa-closed-captioning"></i> Subtitles / CC</div>
+              </div>
+
+              <!-- Categories -->
+              <div class="content-section-label">
+                <i class="fas fa-th"></i> Content Categories
+              </div>
+              <div class="category-grid">
+                <div class="category-item"><div class="cat-dot" style="background:#C9A227;"></div>IPR &amp; Cyber Law</div>
+                <div class="category-item"><div class="cat-dot" style="background:#7B0D1E;"></div>Technology, AI &amp; Research</div>
+                <div class="category-item"><div class="cat-dot" style="background:#5B3DBD;"></div>UGC NET Preparation</div>
+                <div class="category-item"><div class="cat-dot" style="background:#1A6E8C;"></div>Competitive Exam Guidance</div>
+                <div class="category-item"><div class="cat-dot" style="background:#C9A227;"></div>PhD Guidance</div>
+                <div class="category-item"><div class="cat-dot" style="background:#7B0D1E;"></div>Science Subjects</div>
+                <div class="category-item"><div class="cat-dot" style="background:#5B3DBD;"></div>Humanities Subjects</div>
+                <div class="category-item"><div class="cat-dot" style="background:#1A6E8C;"></div>Commerce &amp; Business Mgmt</div>
+                <div class="category-item"><div class="cat-dot" style="background:#C9A227;"></div>Additional Academic Categories</div>
+              </div>
+
+              <div class="note-block">
+                <i class="fas fa-info-circle"></i>
+                <p>Initially integrated through YouTube embedding with future support for self-hosted video infrastructure for enhanced performance, privacy, and advanced analytics.</p>
+              </div>
+
+              <div class="module-cta-row">
+                <button class="btn-primary"><i class="fab fa-youtube"></i> Browse Video Library</button>
+                <button class="btn-secondary"><i class="fas fa-list"></i> View Playlists</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== MODULE 4: RESEARCH PORTAL ===== -->
+      <article class="module-card mod-research" id="mod-research" role="listitem">
+        <button
+          class="module-trigger"
+          id="trigger-research"
+          aria-expanded="false"
+          aria-controls="body-research"
+          onclick="toggleModule('research')"
+        >
+          <div class="module-icon-wrap" aria-hidden="true">
+            <i class="fas fa-flask"></i>
+          </div>
+          <div class="module-trigger-text">
+            <div class="module-number">Module 04</div>
+            <div class="module-heading">Research &amp; Publication Portal</div>
+            <div class="module-tagline">Journals · Patents · PhD Assistance · Conferences</div>
+          </div>
+          <div class="module-toggle-icon" aria-hidden="true">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="module-trigger-separator" aria-hidden="true"></div>
+        </button>
+
+        <div class="module-body" id="body-research" role="region" aria-labelledby="trigger-research">
+          <div class="module-body-inner-wrap">
+            <div class="module-body-inner">
+
+              <!-- Search -->
+              <div class="module-search">
+                <i class="fas fa-search search-icon-left" aria-hidden="true"></i>
+                <input type="search" id="search-research" placeholder="Search journals, papers, conferences…" aria-label="Search research portal" />
+                <button class="search-icon-right" aria-label="Submit search"><i class="fas fa-arrow-right"></i></button>
+              </div>
+
+              <!-- Description -->
+              <div class="module-desc-block">
+                <p>A complete ecosystem supporting research, publication, innovation, and academic excellence.</p>
+              </div>
+
+              <!-- Publications -->
+              <div class="content-section-label">
+                <i class="fas fa-newspaper"></i> Publications &amp; Content
+              </div>
+              <div class="tags-grid">
+                <span class="tag-chip variant-teal"><i class="fas fa-newspaper"></i> Journal Articles</span>
+                <span class="tag-chip variant-teal"><i class="fas fa-book-open"></i> Book Chapters</span>
+                <span class="tag-chip variant-gold"><i class="fas fa-book"></i> Academic Books</span>
+                <span class="tag-chip variant-gold"><i class="fas fa-link"></i> DOI Linked Publications</span>
+                <span class="tag-chip variant-teal"><i class="fas fa-microphone"></i> Conference Proceedings</span>
+                <span class="tag-chip variant-gold"><i class="fas fa-bullhorn"></i> Call for Papers</span>
+              </div>
+
+              <!-- Services -->
+              <div class="content-section-label">
+                <i class="fas fa-concierge-bell"></i> Research Support Services
+              </div>
+              <div class="feature-list">
+                <div class="feature-item"><i class="fas fa-pen-nib"></i> Publication Support</div>
+                <div class="feature-item"><i class="fas fa-lightbulb"></i> Patent Support</div>
+                <div class="feature-item"><i class="fas fa-pencil-alt"></i> Content Writing Services</div>
+                <div class="feature-item"><i class="fas fa-user-graduate"></i> Ph.D. Assistance</div>
+                <div class="feature-item"><i class="fas fa-project-diagram"></i> Project Writing Assistance</div>
+                <div class="feature-item"><i class="fas fa-handshake"></i> Research Consultancy</div>
+                <div class="feature-item"><i class="fas fa-spell-check"></i> Academic Editing</div>
+                <div class="feature-item"><i class="fas fa-globe"></i> International Publication Guidance</div>
+              </div>
+
+              <div class="module-cta-row">
+                <button class="btn-primary"><i class="fas fa-search-plus"></i> Explore Research Portal</button>
+                <button class="btn-secondary"><i class="fas fa-paper-plane"></i> Submit Your Research</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /modules-grid -->
+
+  </main>
+
+  <!-- ==========================================================================
+     FOOTER
+     ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top" style="text-align: left;">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <div class="logo-wrap">
+              <img src="invixaa_logo.jpg" alt="INVIXAA Logo" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-family:Playfair Display,serif;font-weight:800;color:#7B0D1E;font-size:1rem;\'>IX</span>'" />
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">INVIXAA</span>
+              <span class="brand-subtitle">EDTECH</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            An emerging educational and research platform dedicated to bridging the gap between knowledge, innovation, and global opportunities.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="programs-resources.html"><i class="fas fa-chevron-right"></i> Programs &amp; Resources</a></li>
+            <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Connect</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Our Pillars</h4>
+          <ul class="footer-links">
+            <li><a href="about.html#narrative"><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Research</a></li>
+            <li><a href="about.html#narrative"><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Education</a></li>
+            <li><a href="about.html#narrative"><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Innovation</a></li>
+            <li><a href="about.html#narrative"><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Leadership</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Get in Touch</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:+919310432118">+91 9310432118</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:info.invixaa@gmail.com">info.invixaa@gmail.com</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-bottom-text">
+          &ldquo;Empowering learners, advancing research, and creating future leaders through innovation and global collaboration.&rdquo;
+        </p>
+        <div class="footer-social-row">
+          <a href="https://www.instagram.com/invixaaedtech?utm_source=qr&igsh=MWFtYTFiMG5paHNiYw==" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1BedaRaxdb/" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/INVIXAAEdTech" class="social-btn" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://whatsapp.com/channel/0029VbDPPh2HgZWhDybXS11b" class="social-btn" aria-label="WhatsApp Channel" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://t.me/Invixaa_Edtech" class="social-btn" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://www.youtube.com/@InvixaaEdTech" class="social-btn" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2026 <strong>INVIXAA EDTECH</strong>. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================
+       JAVASCRIPT
+  ============================== -->
+  <script>
+    'use strict';
+
+    // ─── Detect interpolate-size support ───────────────────────
+    const supportsInterpolateSize = CSS.supports('interpolate-size', 'allow-keywords');
+
+    // ─── Toggle a module open/closed ───────────────────────────
+    function toggleModule(id) {
+      const card    = document.getElementById(`mod-${id}`);
+      const trigger = document.getElementById(`trigger-${id}`);
+      const body    = document.getElementById(`body-${id}`);
+
+      const isOpen = card.classList.contains('is-open');
+
+      // Close all other cards first
+      document.querySelectorAll('.module-card.is-open').forEach(c => {
+        if (c !== card) collapseCard(c);
+      });
+
+      if (isOpen) {
+        collapseCard(card);
+      } else {
+        expandCard(card, trigger, body);
+      }
+
+      // Update nav pills
+      updatePills(id, !isOpen);
+    }
+
+    function expandCard(card, trigger, body) {
+      card.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+
+      // Scroll card into view smoothly (with offset for fixed headers)
+      requestAnimationFrame(() => {
+        const top = card.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    }
+
+    function collapseCard(card) {
+      const id = card.id.replace('mod-', '');
+      const trigger = document.getElementById(`trigger-${id}`);
+
+      card.classList.remove('is-open');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      updatePills(id, false);
+    }
+
+    // ─── Update quick-nav pill active states ───────────────────
+    function updatePills(activeId, isOpen) {
+      document.querySelectorAll('.prog-pill').forEach(p => p.classList.remove('active'));
+      if (isOpen) {
+        const pill = document.getElementById(`pill-${activeId}`);
+        if (pill) pill.classList.add('active');
+      }
+    }
+
+    // ─── Scroll to card (from pill click) ──────────────────────
+    function scrollToCard(cardId) {
+      const card = document.getElementById(cardId);
+      if (!card) return;
+      const id = cardId.replace('mod-', '');
+
+      // If not open, open it
+      if (!card.classList.contains('is-open')) {
+        toggleModule(id);
+      } else {
+        // Already open — just scroll
+        const top = card.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }
+
+    // ─── Filter button active state ────────────────────────────
+    function setFilter(btn) {
+      const row = btn.closest('.filter-row');
+      row.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    // ─── Keyboard accessibility ────────────────────────────────
+    document.querySelectorAll('.module-trigger').forEach(trigger => {
+      trigger.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          trigger.click();
+        }
+      });
+    });
+
+    // ─── Live search filtering in tags (simple demo) ───────────
+    document.querySelectorAll('.module-search input').forEach(input => {
+      input.addEventListener('input', () => {
+        const query = input.value.toLowerCase().trim();
+        const card = input.closest('.module-card');
+        const chips = card.querySelectorAll('.tag-chip, .feature-item, .category-item');
+
+        chips.forEach(chip => {
+          const text = chip.textContent.toLowerCase();
+          chip.style.opacity = (!query || text.includes(query)) ? '1' : '0.25';
+          chip.style.transform = (!query || text.includes(query)) ? '' : 'scale(0.96)';
+        });
+      });
+    });
+
+    // ─── Intersection observer: animate on scroll ──────────────
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.module-card').forEach(card => {
+      card.style.animationPlayState = 'paused';
+      revealObs.observe(card);
+    });
+
+    // ─── Sticky Header On Scroll ───────────────────────────────
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // ─── Mobile Navbar Menu Toggle ─────────────────────────────
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.classList.toggle('open');
+      navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when clicking navigation link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+
+</body>
+</html>
